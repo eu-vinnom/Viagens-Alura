@@ -48,8 +48,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pacote_viagens_banner">
-
-    </ListView>
+        app:layout_constraintTop_toBottomOf="@+id/pacote_viagens_banner"
+        tools:listitem="@layout/item_lista_pacotes"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
