@@ -2,7 +2,6 @@ package br.com.alura.aluraviagens.ui.adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -63,7 +62,7 @@ public class PacoteViagensAdapter extends BaseAdapter{
 	}
 
 	private void defineLocal(View item, Pacote pacote){
-		TextView campoLocal = item.findViewById(R.id.item_lista_pacotes_cidade);
+		TextView campoLocal = item.findViewById(R.id.item_lista_pacotes_local);
 		campoLocal.setText(pacote.getLocal());
 	}
 

@@ -9,9 +9,8 @@
 	>
 
 	<androidx.cardview.widget.CardView
-		android:id="@+id/item_lista_pacotes_card"
 		android:layout_width="0dp"
-		android:layout_height="200dp"
+		android:layout_height="wrap_content"
 		android:layout_margin="8dp"
 		app:cardCornerRadius="10dp"
 		app:layout_constraintBottom_toBottomOf="parent"
@@ -23,7 +22,6 @@
 		>
 
 		<androidx.constraintlayout.widget.ConstraintLayout
-			android:id="@+id/item_lista_pacotes_card_constraint"
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"
 			>
@@ -51,7 +49,7 @@
 				/>
 
 			<TextView
-				android:id="@+id/item_lista_pacotes_cidade"
+				android:id="@+id/item_lista_pacotes_local"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:layout_margin="8dp"
