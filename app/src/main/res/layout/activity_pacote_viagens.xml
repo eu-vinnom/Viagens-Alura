@@ -6,7 +6,7 @@
 	android:id="@+id/pacote_viagens"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	tools:context=".PacoteViagensActivity"
+	tools:context=".ui.activity.PacoteViagensActivity"
 	>
 
 	<ImageView
