@@ -1,7 +1,9 @@
 <resources>
-    <string name="app_name">Alura Viagens</string>
-    <string name="especiais">Especiais</string>
-    <string name="país">Brasil</string>
-    <string name="banner">banner</string>
-    <string name="foto_panoramica">Foto Panorâmica</string>
+	<string name="app_name">Alura Viagens</string>
+	<string name="especiais">Especiais</string>
+	<string name="país">Brasil</string>
+	<string name="banner">banner</string>
+	<string name="foto_panoramica">Foto Panorâmica da Cidade</string>
+	<string name="preco_final">Preço Final:</string>
+	<string name="realizar_pagamento">Realizar Pagamento</string>
 </resources>

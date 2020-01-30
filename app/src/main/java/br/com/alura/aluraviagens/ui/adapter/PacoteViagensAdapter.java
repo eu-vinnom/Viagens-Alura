@@ -21,15 +21,13 @@ import br.com.alura.aluraviagens.util.MoedaUtil;
 
 public class PacoteViagensAdapter extends BaseAdapter{
 
-	List<Pacote> pacotes;
-	PacoteDAO pacoteDao;
-	private Context contexto;
+	private final List<Pacote> pacotes;
+	private final Context contexto;
 
 	public PacoteViagensAdapter(Context context){
 		this.contexto = context;
-		this.pacoteDao = new PacoteDAO();
+		PacoteDAO pacoteDao = new PacoteDAO();
 		this.pacotes = new ArrayList<>(pacoteDao.lista());
-
 	}
 
 	@Override
@@ -78,7 +76,7 @@ public class PacoteViagensAdapter extends BaseAdapter{
 
 	private void defineImagem(View item, Pacote pacote){
 		ImageView campoImagem = item.findViewById(R.id.item_lista_pacotes_panoramica);
-		campoImagem.setImageDrawable(ImagemUtil.buscaImagem(pacote, contexto));
+		campoImagem.setImageDrawable(ImagemUtil.buscaImagem(pacote.getImagem(), contexto));
 	}
 
 }
