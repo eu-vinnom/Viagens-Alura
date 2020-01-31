@@ -81,13 +81,13 @@
 		/>
 
 	<Button
-		android:id="@+id/button"
+		android:id="@+id/resumo_pacote_botao_pagamento"
 		android:layout_width="0dp"
 		android:layout_height="wrap_content"
 		android:layout_marginStart="8dp"
 		android:layout_marginEnd="8dp"
 		android:layout_marginBottom="8dp"
-		android:background="@drawable/plano_fundo_botao_realizar_pagamento"
+		android:background="@drawable/plano_fundo_botao_pagamento"
 		android:text="@string/realizar_pagamento"
 		android:textColor="@android:color/white"
 		app:layout_constraintBottom_toBottomOf="parent"
