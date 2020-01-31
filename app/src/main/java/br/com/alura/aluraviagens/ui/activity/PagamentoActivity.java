@@ -23,10 +23,11 @@ public class PagamentoActivity extends AppCompatActivity{
 		setContentView(R.layout.activity_pagamento);
 		setTitle(APPBAR);
 
-		PacoteComponent component = new PacoteComponent(this, this);
+		PacoteComponent component = new PacoteComponent(this);
 
 		pacote = component.recuperaPacote();
-		component.definePreco(pacote);
+
+		component.definePreco(pacote, R.id.pagamento_valor_pacote);
 
 		doPagamentoProResumoCompra = geraIntentProResumoCompra();
 

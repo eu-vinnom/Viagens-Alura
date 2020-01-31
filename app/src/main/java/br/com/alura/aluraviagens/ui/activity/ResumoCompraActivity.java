@@ -10,7 +10,6 @@ import br.com.alura.aluraviagens.ui.activity.component.PacoteComponent;
 public class ResumoCompraActivity extends AppCompatActivity{
 
 	private static final String APPBAR = "Resumo da compra";
-	private static final String CHAVE_PACOTE = "pacote";
 	private Pacote pacote;
 
 	@Override
@@ -19,13 +18,13 @@ public class ResumoCompraActivity extends AppCompatActivity{
 		setContentView(R.layout.activity_resumo_compra);
 		setTitle(APPBAR);
 
-		PacoteComponent component = new PacoteComponent(this, this);
+		PacoteComponent component = new PacoteComponent(this);
 
 		pacote = component.recuperaPacote();
 
-		component.defineImagem(pacote);
-		component.defineLocal(pacote);
-		component.defineData(pacote);
-		component.definePreco(pacote);
+		component.defineImagem(pacote, R.id.resumo_compra_panoramica);
+		component.defineLocal(pacote, R.id.resumo_compra_local);
+		component.defineData(pacote, R.id.resumo_compra_data);
+		component.definePreco(pacote, R.id.resumo_compra_valor);
 	}
 }

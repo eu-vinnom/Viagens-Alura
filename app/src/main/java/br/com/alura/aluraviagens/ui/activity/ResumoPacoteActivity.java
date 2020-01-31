@@ -14,7 +14,7 @@ public class ResumoPacoteActivity extends AppCompatActivity{
 
 	private static final String APPBAR = "Resumo do Pacote";
 	private static final String CHAVE_PACOTE = "pacote";
-	private Intent doResumoProForm;
+	private Intent doResumoPacoteProPagamento;
 	private Pacote pacote;
 
 	@Override
@@ -23,15 +23,15 @@ public class ResumoPacoteActivity extends AppCompatActivity{
 		setContentView(R.layout.activity_resumo_pacote);
 		setTitle(APPBAR);
 
-		PacoteComponent component = new PacoteComponent(this, this);
+		PacoteComponent component = new PacoteComponent(this);
 
 		pacote = component.recuperaPacote();
 
-		component.defineLocal(pacote);
-		component.defineDias(pacote);
-		component.definePreco(pacote);
-		component.defineImagem(pacote);
-		component.defineData(pacote);
+		component.defineLocal(pacote, R.id.resumo_pacote_local);
+		component.defineDias(pacote, R.id.resumo_pacote_dias);
+		component.definePreco(pacote, R.id.resumo_pacote_valor);
+		component.defineImagem(pacote, R.id.resumo_pacote_panoramica);
+		component.defineData(pacote, R.id.resumo_pacote_data);
 
 		geraIntentProPagamento();
 
@@ -43,14 +43,14 @@ public class ResumoPacoteActivity extends AppCompatActivity{
 		realizaPagamento.setOnClickListener(new View.OnClickListener(){
 			@Override
 			public void onClick(View view){
-				doResumoProForm.putExtra(CHAVE_PACOTE, pacote);
-				startActivity(doResumoProForm);
+				doResumoPacoteProPagamento.putExtra(CHAVE_PACOTE, pacote);
+				startActivity(doResumoPacoteProPagamento);
 			}
 		});
 	}
 
 	private void geraIntentProPagamento(){
-		doResumoProForm = new Intent(this, PagamentoActivity.class);
+		doResumoPacoteProPagamento = new Intent(this, PagamentoActivity.class);
 	}
 
 }
