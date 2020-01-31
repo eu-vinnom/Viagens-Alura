@@ -6,8 +6,7 @@
 	<string name="foto_panoramica">Foto Panorâmica da Cidade</string>
 	<string name="preco_final">Preço Final:</string>
 	<string name="realizar_pagamento">Realizar Pagamento</string>
-	<string
-		name="pagamento_orientacao">Digite as informações do cartão de crédito que você deseja usar para o pagamento
+	<string name="pagamento_orientacao">Digite as informações do cartão de crédito que você deseja usar para o pagamento
 	</string>
 	<string name="valor_compra">Valor da Compra:</string>
 	<string name="cartao_mes">MM</string>
@@ -17,4 +16,7 @@
 	<string name="finalizar_pagamento">finalizar pagamento</string>
 	<string name="cartao_numero">Número do cartão</string>
 	<string name="alfabeto">ABCDEFGHIKL MNOPQRSTUVWXYZ</string>
+	<string name="parabens">Parabéns!</string>
+	<string name="compra_realizada">Compra realizada com sucesso :)</string>
+	<string name="resumo_compra">Confira o resumo da compra:</string>
 </resources>
