@@ -11,11 +11,13 @@ import br.com.alura.aluraviagens.util.MoedaUtil;
 
 public class PagamentoActivity extends AppCompatActivity{
 
+	public static final String APPBAR = "Pagamento";
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_pagamento);
-		setTitle("Pagamento");
+		setTitle(APPBAR);
 
 		Intent dadosPacote = getIntent();
 		Pacote pacote = (Pacote) dadosPacote.getSerializableExtra("pacote");
