@@ -18,7 +18,7 @@
 		<activity android:name=".ui.activity.ResumoCompraActivity"></activity>
 		<activity android:name=".ui.activity.PagamentoActivity" />
 		<activity android:name=".ui.activity.ResumoPacoteActivity" />
-		<activity android:name=".ui.activity.PacoteViagensActivity">
+		<activity android:name=".ui.activity.PacotesViagensActivity">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 

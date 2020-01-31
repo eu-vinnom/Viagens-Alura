@@ -13,12 +13,12 @@ import br.com.alura.aluraviagens.util.DiasUtil;
 import br.com.alura.aluraviagens.util.ImagemUtil;
 import br.com.alura.aluraviagens.util.MoedaUtil;
 
-public class ResumoPacoteComponent{
+public class PacoteComponent{
 
 	private Activity activity;
 	private Context contexto;
 
-	public ResumoPacoteComponent(Activity activity, Context contexto){
+	public PacoteComponent(Activity activity, Context contexto){
 		this.activity = activity;
 		this.contexto = contexto;
 	}

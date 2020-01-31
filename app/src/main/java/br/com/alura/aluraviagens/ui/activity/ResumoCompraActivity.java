@@ -1,22 +1,16 @@
 package br.com.alura.aluraviagens.ui.activity;
 
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import br.com.alura.aluraviagens.R;
 import br.com.alura.aluraviagens.model.Pacote;
-import br.com.alura.aluraviagens.util.DataUtil;
-import br.com.alura.aluraviagens.util.ImagemUtil;
-import br.com.alura.aluraviagens.util.MoedaUtil;
-
-import android.content.Intent;
-import android.os.Bundle;
-import android.widget.ImageView;
-import android.widget.TextView;
-
-import java.io.Serializable;
+import br.com.alura.aluraviagens.ui.activity.component.PacoteComponent;
 
 public class ResumoCompraActivity extends AppCompatActivity{
 
-	public static final String APPBAR = "Resumo da compra";
+	private static final String APPBAR = "Resumo da compra";
+	private static final String CHAVE_PACOTE = "pacote";
 	private Pacote pacote;
 
 	@Override
@@ -25,19 +19,13 @@ public class ResumoCompraActivity extends AppCompatActivity{
 		setContentView(R.layout.activity_resumo_compra);
 		setTitle(APPBAR);
 
-		Intent dadosPacote = getIntent();
-		pacote = (Pacote) dadosPacote.getSerializableExtra("pacote");
+		PacoteComponent component = new PacoteComponent(this, this);
 
-		ImageView campoImagem = findViewById(R.id.resumo_compra_panoramica);
-		campoImagem.setImageDrawable(ImagemUtil.buscaImagem(pacote.getImagem(), this));
+		pacote = component.recuperaPacote();
 
-		TextView campoLocal = findViewById(R.id.resumo_compra_local);
-		campoLocal.setText(pacote.getLocal());
-
-		TextView campoData = findViewById(R.id.resumo_compra_data);
-		campoData.setText(DataUtil.formataData(pacote.getDias()));
-
-		TextView campoValor = findViewById(R.id.resumo_compra_valor);
-		campoValor.setText(MoedaUtil.formataMoeda(pacote.getPreco()));
+		component.defineImagem(pacote);
+		component.defineLocal(pacote);
+		component.defineData(pacote);
+		component.definePreco(pacote);
 	}
 }

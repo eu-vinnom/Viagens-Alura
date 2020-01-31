@@ -4,16 +4,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import br.com.alura.aluraviagens.R;
 import br.com.alura.aluraviagens.model.Pacote;
-import br.com.alura.aluraviagens.util.MoedaUtil;
+import br.com.alura.aluraviagens.ui.activity.component.PacoteComponent;
 
 public class PagamentoActivity extends AppCompatActivity{
 
 	private static final String APPBAR = "Pagamento";
+	private static final String CHAVE_PACOTE = "pacote";
 	private Intent doPagamentoProResumoCompra;
 	private Pacote pacote;
 
@@ -23,19 +23,22 @@ public class PagamentoActivity extends AppCompatActivity{
 		setContentView(R.layout.activity_pagamento);
 		setTitle(APPBAR);
 
-		Intent dadosPacote = getIntent();
-		pacote = (Pacote) dadosPacote.getSerializableExtra("pacote");
+		PacoteComponent component = new PacoteComponent(this, this);
 
-		TextView campoValor = findViewById(R.id.pagamento_valor_pacote);
-		campoValor.setText(MoedaUtil.formataMoeda(pacote.getPreco()));
+		pacote = component.recuperaPacote();
+		component.definePreco(pacote);
 
 		doPagamentoProResumoCompra = geraIntentProResumoCompra();
 
+		abreResumoCompra();
+	}
+
+	private void abreResumoCompra(){
 		Button finalizaPagamento = findViewById(R.id.pagamento_botao_finalizar);
 		finalizaPagamento.setOnClickListener(new View.OnClickListener(){
 			@Override
 			public void onClick(View view){
-				doPagamentoProResumoCompra.putExtra("pacote", pacote);
+				doPagamentoProResumoCompra.putExtra(CHAVE_PACOTE, pacote);
 				startActivity(doPagamentoProResumoCompra);
 			}
 		});
