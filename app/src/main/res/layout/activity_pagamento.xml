@@ -108,6 +108,7 @@
 		android:layout_marginTop="8dp"
 		android:hint="@string/cartao_nome"
 		android:inputType="textCapCharacters"
+		android:digits="@string/alfabeto"
 		app:layout_constraintEnd_toEndOf="@+id/pagamento_cartao_cvc"
 		app:layout_constraintStart_toStartOf="@+id/pagamento_cartao_mes"
 		app:layout_constraintTop_toBottomOf="@+id/pagamento_cartao_cvc"
